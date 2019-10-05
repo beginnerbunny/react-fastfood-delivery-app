@@ -1,25 +1,51 @@
 @media only screen and (orientation: landscape) {
     body {
         background-color: #f4f4f4;
+        font-family: "Roboto";
     }
 }
 
 body, html { margin: 0; padding: 0;}
 
 button {
-	color:black;
-    background: #ffd400;
+    background: #CB202D;
 	font-size: .6em;
     border: none;
     width: 100%;
     border-radius: 3px;
     font-size: .9em;
     padding: .6em .9em;
+    color: #f4f4f4;
 }
+ a{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;  
+    color: #f4f4f4;
+ }
 
 .jumbotron {
-  background: #ffd400;
-  margin-bottom: 0px;
+  color: #f4f4f4;
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  background: #CB202D;
+}
+
+.image-container{
+    display: flex;
+    margin-top: 1em;
+}
+
+.brand-image{
+    width: 100%;
+    max-height: 65vh;
+}
+
+.title{
+    position: relative;
 }
 
 .jumbotron .h1 {
@@ -28,11 +54,11 @@ button {
 }
 
 .category {
-	border: 1px solid #ffd400;
+	border: 1px solid #CB202D;
     padding: 6px;
-	color: black;
 	border-radius: 4px;
-    background: #ffd400;
+    background: #CB202D;
+    color: #f4f4f4;
 }
 
 .cart-container {
@@ -78,6 +104,13 @@ button {
     word-break: break-word;
 }
 
+#cta-button{
+    background-color: green;
+    position: absolute;
+    right: 0;
+    width: 10em;
+}
+
 .inputBox {
   height: 30px;
   width: 100%;
@@ -103,4 +136,22 @@ button {
 
 .discounted-price {
     color: green;
+}
+
+.form-container{
+    margin: 0px auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 2em 5em;
+    max-width: 320px;
+    margin-top: 2em;
+}
+
+.form-input{
+    margin-bottom: 1.5em;
+}
+
+.submit-button{
+    background-color: #107338;
+    color: #f4f4f4;
 }

@@ -28,7 +28,6 @@ const MenuItem = (props) => {
                         <span className="card-price">{'Price - ₹' + props.data.price}</span>
                     )}
                     <hr />
-                    <span className="ingredients">{'Ingredients: ' + props.data.ingredients.toString()}</span>
                 </div>
             </div>
             <button onClick={e => props.addToCart(props.data)}>ADD</button>

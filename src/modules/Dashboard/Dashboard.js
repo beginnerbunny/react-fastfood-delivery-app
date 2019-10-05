@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as api from '../../shared/api.js';
 import * as actions from './action.js';
 import * as filterActions from '../Filters/action';
 import MenuItemList from '../Menu/menuItemList';
 import Cart from '../Cart/cart';
 import Filters from "../Filters/filterManager";
+import {getItems} from "../../shared/data";
+
 class Dashboard extends Component {
 
     constructor(props, context) {
@@ -14,17 +15,19 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        api.getAllItems()
-        .then((response) => {
-            const items = response.data;
-            this.props.loadFoodItems(items.menu);
-            this.props.filterMenu(items.menu);
-        })
-        .catch(error => {
-            console.log(error);
-            this.props.loadFoodItems([]);
-            this.props.filterMenu([]);
-        });
+        // api.getAllItems()
+        // .then((response) => {
+        //     const items = response.data;
+        //     this.props.loadFoodItems(items.menu);
+        //     this.props.filterMenu(items.menu);
+        // })
+        // .catch(error => {
+        //     console.log(error);
+        //     this.props.loadFoodItems([]);
+        //     this.props.filterMenu([]);
+        // });
+        this.props.loadFoodItems(getItems.menu);
+        this.props.filterMenu(getItems.menu);
     }
 
     render() {

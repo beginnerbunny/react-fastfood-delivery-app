@@ -13,13 +13,6 @@ class Cart extends Component {
         this.state = initialstate;
     }
 
-    checkout = () => {
-        this.setState({
-            checkoutAlert: true
-        });
-        this.props.checkoutCurrentOrder();
-    }
-
     removeItemFromCart = (idx) => {
         let arr = [...this.props.selectedItems];
         arr.splice(idx, 1);
@@ -68,17 +61,22 @@ class Cart extends Component {
                         <div className="cart-total">
                             {'Total: ₹' + total}
                         </div>
-                        <button onClick={e => this.checkout()}>CHECKOUT</button>
-                    </div>
-                )}
-                {this.state.checkoutAlert && (
-                    <div className="cart-container">
-                        <div className="success">
-                            {'Your order is on it\'s way and will be delivered in 30 minutes.'}
+                        <div className="choose-payment">
+                            <h3>Choose Payment Method</h3>
+                            <div>
+                                <input type="radio" name="payment" value="cash"></input>
+                            {'Cash'}
+                            </div>
+                            <div>
+                            <input type="radio" name="payment" value="card"></input>
+                            {'Card'}
+                            </div>
+                            <div>
+                            <input type="radio" name="payment" value="paytm"></input>
+                            {'Paytm'}
+                            </div>
                         </div>
-                        <button onClick={e => this.setState({
-                            checkoutAlert: false
-                        })}>PLACE NEW ORDER</button>
+                        <button onClick={() => this.props.history.push('/payment')}>Pay</button>
                     </div>
                 )}
             </div>

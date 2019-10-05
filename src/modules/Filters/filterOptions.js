@@ -11,10 +11,10 @@ const FilterOptions = (props) => {
         <label htmlFor="categoryfilter" className="pull-left">Category:</label>
         <select name="categoryfilter" className="inputBox" value={props.filterCategoryText ? props.filterCategoryText : ''} onChange={e => props.handleFilteration(e, 'category')}>
           <option value="">{'All'}</option>
-          <option value="Burgers">{'Burgers'}</option>
-          <option value="Sandwitches">{'Sandwitches'}</option>
-          <option value="Pizzas">{'Pizzas'}</option>
-          <option value="Drinks">{'Drinks'}</option>
+          <option value="Sabzi">{'Sabzi'}</option>
+          <option value="Starters">{'Starters'}</option>
+          <option value="Breads">{'Breads'}</option>
+          <option value="Rice">{'Rice'}</option>
         </select>
       </div>
       <div className="col col-xs-3 col-md-3">
